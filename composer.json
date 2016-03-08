@@ -1,0 +1,19 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Progs\\Config\\": "app/Config/",
+            "Progs\\Controller\\": "app/Controllers/",
+            "Progs\\Model\\": "app/Models/",
+            "Progs\\Lib\\": "app/Lib/"
+        }
+    },
+
+        "require": {
+        "twig/twig": "~1.0",
+        "bramus/router": "^1.0",
+            "doctrine/common": "2.4.*",
+            "doctrine/dbal": "2.4.*",
+            "doctrine/orm": "2.4.*"
+
+    }
+}
