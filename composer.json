@@ -4,7 +4,8 @@
             "Progs\\Config\\": "app/Config/",
             "Progs\\Controller\\": "app/Controllers/",
             "Progs\\Model\\": "app/Models/",
-            "Progs\\Lib\\": "app/Lib/"
+            "Progs\\Lib\\": "app/Lib/",
+            "Progs\\Service\\":"app/service",		
         }
     },
 
