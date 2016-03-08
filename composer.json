@@ -1,4 +1,19 @@
 {
+ "name": "Progs",
+    "type": "Framework",
+    "description": "Base for developer web sites simples",
+    "keywords": ["micro framework","base for web site"],
+    "homepage": "https://github.com/ale-php/progs_base/tree/stable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexandre Evangelista de Souza",
+            "email": "alexandre@progs.net.br",
+            "homepage": "http://progs.net.br",
+            "role": "Developer"
+        }
+    ],
+  
     "autoload": {
         "psr-4": {
             "Progs\\Config\\": "app/Config/",
@@ -10,6 +25,7 @@
     },
 
         "require": {
+        "php": ">=5.5.0",
         "twig/twig": "~1.0",
         "bramus/router": "^1.0",
             "doctrine/common": "2.4.*",
