@@ -11,17 +11,10 @@ var sass = require('gulp-sass');
 var filesjs = "./app/resources/sources/js/*.js";
 var filescss = "./app/resources/sources/css/*.scss";
 //Aqui criamos uma nova tarefa através do ´gulp.task´ e damos a ela o nome 'lint'
-gulp.task('lint', function() {
 
-// Aqui carregamos os arquivos que a gente quer rodar as tarefas com o `gulp.src`
-// E logo depois usamos o `pipe` para rodar a tarefa `jshint`
-    gulp.src(filesjs)
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'));
-});
 
 //Criamos outra tarefa com o nome 'dist'
-gulp.task('dist', function() {
+gulp.task('js', function() {
 
 // Carregamos os arquivos novamente
 // E rodamos uma tarefa para concatenação
@@ -49,9 +42,6 @@ gulp.task('default', function() {
 
 // Usamos o `gulp.run` para rodar as tarefas
 // E usamos o `gulp.watch` para o Gulp esperar mudanças nos arquivos para rodar novamente
-    gulp.run('lint', 'dist','sass');
+    gulp.run( 'js','sass');
 
-    gulp.watch(filesjs,filescss, function(evt) {
-        gulp.run('lint', 'dist','sass');
-    });
 });

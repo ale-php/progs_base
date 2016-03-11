@@ -42,7 +42,7 @@
         ],
         "post-create-project-cmd": [
             "npm install",
-            "gulp"
+            "gulp sass"
         ]
     }
 
