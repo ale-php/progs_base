@@ -23,7 +23,7 @@
             "Progs\\Controller\\": "app/Controllers/",
             "Progs\\Model\\": "app/Models/",
             "Progs\\Lib\\": "app/Lib/",
-            "Progs\\Service\\":"app/service",		
+            "Progs\\Service\\":"app/service"	
         }
     },
 
