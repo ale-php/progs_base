@@ -2,15 +2,12 @@
 
 use Progs\Controller\HomeController;
 
-$router->get('/', function(){
+$router->get('/?', function($nome){
 
-    return (new HomeController())->home();
+    return (new HomeController())->home($nome);
 
 });
 
-$router->get('/hello/?/?', function($name,$nome2) {
-    echo 'Hello ' . htmlentities($name.$nome2);
-});
 
 $router->mount('/site', function() use ($router) {
 
@@ -21,19 +18,15 @@ $router->mount('/site', function() use ($router) {
 
     });
 
-    $router->get('/ebooks', function(){
-
-        return (new HomeController())->ebooks();
-
-    });
-
-    $router->get('/contato', function(){
-
-        return (new HomeController())->contatos();
-
-    });
 
 
-})
 
+});
+
+//erro 404
+
+$router->set404(function() {
+    header('HTTP/1.1 404 Not Found');
+   return (new \Progs\Lib\BaseController())->error404();
+});
 ?>

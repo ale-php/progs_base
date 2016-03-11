@@ -37,4 +37,11 @@ class BaseController
         echo $this->twig->render($view.'.html.twig', $params);
     }
 
+
+    public function error404(){
+
+        $this->render('error/404');
+    }
+
+
 }
