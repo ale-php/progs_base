@@ -22,7 +22,7 @@ class Progs_Extension extends Twig_Extension
 
     public function assetsFunction($link)
     {
-        $assets = 'http://'.$_SERVER['SERVER_NAME'].'/'.$link;
+        $assets = 'http://'.$_SERVER['HTTP_HOST'].'/'.$link;
 
         return $assets;
     }
