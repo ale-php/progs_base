@@ -1,10 +1,12 @@
 {
 
+
     "name": "ale-php/progs_base",
     "type": "framework",
     "description": "base for developer web php",
     "keywords": ["micro framework","base for developer web"],
     "homepage": "https://github.com/ale-php/progs_base",
+
     "license": "MIT",
     "authors": [
         {
@@ -20,12 +22,14 @@
             "Progs\\Config\\": "app/Config/",
             "Progs\\Controller\\": "app/Controllers/",
             "Progs\\Model\\": "app/Models/",
-            "Progs\\Lib\\": "app/Lib/"
+            "Progs\\Lib\\": "app/Lib/",
+            "Progs\\Service\\":"app/service",		
         }
     },
 
         "require": {
          "php" :">= 5.4",
+
         "twig/twig": "~1.0",
         "bramus/router": "^1.0",
             "doctrine/common": "2.4.*",
