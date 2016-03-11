@@ -1,6 +1,6 @@
 {
 
- "name": "ale-php/progs_base",
+    "name": "ale-php/progs_base",
     "type": "framework",
     "description": "base for developer web php",
     "keywords": ["micro framework","base for developer web"],
@@ -15,14 +15,24 @@
         }
     ],
 
-  
+    "autoload": {
+        "psr-4": {
+            "Progs\\Config\\": "app/Config/",
+            "Progs\\Controller\\": "app/Controllers/",
+            "Progs\\Model\\": "app/Models/",
+            "Progs\\Lib\\": "app/Lib/"
+        }
+    },
+
         "require": {
-        "php": ">=5.4.0",
+         "php" :">= 5.4",
         "twig/twig": "~1.0",
         "bramus/router": "^1.0",
             "doctrine/common": "2.4.*",
             "doctrine/dbal": "2.4.*",
             "doctrine/orm": "2.4.*"
 
+
     }
 }
+
