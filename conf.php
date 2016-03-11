@@ -7,4 +7,8 @@
  */
 
 define('BASEPATCH',__DIR__);
+
+
+require BASEPATCH.'/app/Config/routers.php';
+require BASEPATCH.'/app/Config/db.php';
 ?>

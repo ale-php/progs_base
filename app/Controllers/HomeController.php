@@ -16,7 +16,9 @@ class HomeController extends BaseController
     public function home()
     {
 
-        $this->render('home',['msg'=>'Seja bem vindo a Progs Base']);
+        $this->render('home/home',['msg'=>'Seja bem vindo ']);
     }
+
+
     
 }

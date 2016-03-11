@@ -4,42 +4,9 @@
   background-color: #ffffff;
 }
 
-.facebook{
-  @extend .btn;
-  @extend .btn-primary;
 
+.contente{
+
+  margin-top: 10%;
 }
 
-.google{
-  @extend .btn;
-  @extend .btn-danger;
-
-}
-
-.enviar{
-  @extend .btn;
-  @extend .btn-success;
-}
-
-.login{
-
-  @include make-sm-column(3);
-  @include make-xs-column(10);
-  @include make-sm-column-offset(4);
-
-  height: 200px;
-  margin-top: 20%;
-  background-color: $well-bg;
-
-}
-
-form{
-  height: 150px;
-}
-
-.title{
-  font-family: "Verdana";
-  font-size: 3em;
-  font-stretch: condensed;
-
-}

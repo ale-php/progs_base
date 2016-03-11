@@ -16,7 +16,7 @@ class Test
             if(strpos($a, '-h') !== false || strpos($a, '?') !== false) return $this->help();
             if(strpos($a, 'make:') !== false) return $this->cmdMake(substr($a, 5), $ax);
             if(strpos($a, 'db:') !== false) return $this->dbMake(substr($a, 3), $ax);
-
+            if(strpos($a, 'clear:') !== false) return $this->clear(substr($a, 6), $ax);
             //Plugins
             if(strpos($a, 'table:') !== false) {
                 $plugin = new Plugin\Table(substr($a, 6), $ax);
@@ -26,6 +26,11 @@ class Test
 
     }
 
+    function clear(){
+        system('rm -rf /app/resources/cache/*');
+
+        echo "cache limpo";
+    }
 
     function dbMake($comando, $parametros)
     {
