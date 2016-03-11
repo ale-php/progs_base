@@ -9,23 +9,15 @@
 
 
 //AutoLoader do Composer
-$loader = require '../vendor/autoload.php';
-
-//vamos adicionar nossas classes ao AutoLoader
-//$loader->add('DoctrineNaPratica', __DIR__.'/app/Models');
-
-
-
-
+$loader = require dirname(__DIR__).'/vendor/autoload.php';
 
 // Create Router instance
-$router = new \Bramus\Router\Router();
+$router = new \Progs\Lib\Router();
 
 
 // Define routes
-require '../conf.php';
-require '../app/Config/routers.php';
-require '../app/Config/db.php';
+require dirname(__DIR__).'/conf.php';
+
 
 // Run it!
 $router->run();

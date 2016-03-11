@@ -10,6 +10,7 @@ namespace Progs\Lib;
 
 use Twig_Loader_Filesystem;
 use Twig_Environment;
+use Progs\Lib\Progs_Extension;
 
 class BaseController
 {
@@ -26,13 +27,21 @@ class BaseController
         $this->twig = new Twig_Environment($this->loader, array(
             'cache' => BASEPATCH.'/app/resources/cache',
         ));
+        $this->twig->addExtension(new Progs_Extension());
 
 
     }
 
-    public function render($view,$params = null){
+    public function render($view,$params = array()){
 
         echo $this->twig->render($view.'.html.twig', $params);
     }
+
+
+    public function error404(){
+
+        $this->render('error/404');
+    }
+
 
 }

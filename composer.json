@@ -1,9 +1,12 @@
 {
- "name": "Progs",
-    "type": "Framework",
-    "description": "Base for developer web sites simples",
-    "keywords": ["micro framework","base for web site"],
-    "homepage": "https://github.com/ale-php/progs_base/tree/stable",
+
+
+    "name": "ale-php/progs_base",
+    "type": "framework",
+    "description": "base for developer web php",
+    "keywords": ["micro framework","base for developer web"],
+    "homepage": "https://github.com/ale-php/progs_base",
+
     "license": "MIT",
     "authors": [
         {
@@ -13,7 +16,7 @@
             "role": "Developer"
         }
     ],
-  
+
     "autoload": {
         "psr-4": {
             "Progs\\Config\\": "app/Config/",
@@ -25,12 +28,15 @@
     },
 
         "require": {
-        "php": ">=5.5.0",
+         "php" :">= 5.4",
+
         "twig/twig": "~1.0",
         "bramus/router": "^1.0",
             "doctrine/common": "2.4.*",
             "doctrine/dbal": "2.4.*",
             "doctrine/orm": "2.4.*"
 
+
     }
 }
+
