@@ -1,0 +1,163 @@
+.atom {
+  position:relative;
+  height: 150px;
+  margin-top: 10%;
+}
+.orbital {
+  -moz-transform: rotate(-55deg) scale(1, 1) skewX(12deg) skewY(40deg) translate(0, 0);
+  -webkit-transform: rotate(-55deg) scale(1, 1) skew(12deg, 40deg) translate(0, 0);
+  -o-transform: rotate(-55deg) scale(1, 1) skew(12deg, 40deg) translate(0, 0);
+  -ms-transform: rotate(-55deg) scale(1, 1) skew(12deg, 40deg) translate(0, 0);
+  transform: rotate(-55deg) scale(1, 1) skew(12deg, 40deg) translate(0, 0);
+  position:absolute;
+  width: 70px;
+  height:70px;
+  top:50%;
+  left:50%;
+  margin-top: -35px;
+  margin-left:-35px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 2px solid #999;
+}
+.orbital.e3 {
+  -moz-transform: rotate(70deg) scale(1, 1) skewX(12deg) skewY(40deg) translate(0, 0);
+  -webkit-transform: rotate(70deg) scale(1, 1) skew(12deg, 40deg) translate(0, 0);
+  -o-transform: rotate(70deg) scale(1, 1) skew(12deg, 40deg) translate(0, 0);
+  -ms-transform: rotate(70deg) scale(1, 1) skew(12deg, 40deg) translate(0, 0);
+  transform: rotate(70deg) scale(1, 1) skew(12deg, 40deg) translate(0, 0);
+}
+.orbital.e2 {
+  -moz-transform: rotate(240deg) scale(1, 1) skewX(12deg) skewY(40deg) translate(0, 0);
+  -webkit-transform: rotate(0deg) scale(1, 1) skew(12deg, 40deg) translate(0, 0);
+  -o-transform: rotate(0deg) scale(1, 1) skew(12deg, 40deg) translate(0, 0);
+  -ms-transform: rotate(0deg) scale(1, 1) skew(12deg, 40deg) translate(0, 0);
+  transform: rotate(0deg) scale(1, 1) skew(12deg, 40deg) translate(0, 0);
+}
+.ruta {
+  width: 70px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -5px;
+}
+.electron {
+  background-color: #00C4C9;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width:9px;
+  height:9px;
+  margin-left:-6px;
+}
+.proton, .neutron {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  position:absolute;
+  width:8px;
+  height:8px;
+}
+.proton {
+  background-color: #2DCC70;
+}
+.neutron {
+  background-color: #FE5D55;
+}
+.proton.p1 {
+  left:50%;
+  margin-left:-4px;
+  margin-top: -8px;
+  top:50%;
+  z-index:2;
+}
+.proton.p2 {
+  left:50%;
+  margin-left:-4px;
+  top:50%;
+}
+.neutron.n1 {
+  left:50%;
+  margin-left:-8px;
+  margin-top: -4px;
+  top:50%;
+}
+.neutron.n2 {
+  left:50%;
+  margin-top: -4px;
+  top:50%;
+}
+.ruta {
+  -webkit-animation: spin 2.5s infinite linear;
+  -o-animation: spin 2.5s infinite linear;
+  animation: spin 2.5s infinite linear;
+}
+.orbital.e2 .ruta {
+  -webkit-animation: spin 2.5s infinite -1.25s linear;
+  -o-animation: spin 2.5s infinite -1.25s linear;
+  animation: spin 2.5s infinite -1.25s linear;
+}
+.orbital.e3 .ruta {
+  -webkit-animation: spin 2.5s infinite 0s linear;
+  -o-animation: spin 2.5s infinite 0s linear;
+  animation: spin 2.5s infinite 0s linear;
+}
+
+/*-- Animación electron --*/
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/* tema oscuro */
+
+.dark {
+  background-color:#333;
+}
+.atom.dark .orbital {
+  border: 2px solid #eee;
+}

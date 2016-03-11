@@ -2,26 +2,13 @@
 
 use Progs\Controller\HomeController;
 
-$router->get('/?', function($nome){
+$router->get('/', function(){
 
-    return (new HomeController())->home($nome);
-
-});
-
-
-$router->mount('/site', function() use ($router) {
-
-    $router->get('/artigos/?/?', function($nome ,$sobrenome){
-
-
-        return (new HomeController())->artigos($nome,$sobrenome);
-
-    });
-
-
-
+    return (new HomeController())->home();
 
 });
+
+
 
 //erro 404
 
